@@ -1,0 +1,89 @@
+{
+  "name": "pwc",
+  "displayName": "Playwright Copilot",
+  "description": "Playwright Copilot is a Visual Studio Code extension that automates web testing by generating code for Playwright and Cucumber/BDD frameworks. With AI-powered code generation, users can input BDD scenarios, choose an OpenAI model, and instantly create step definitions and Page Object Model (POM) code.",
+  "version": "1.0.0",
+  "license": "CC-BY-NC-4.0",
+  "licenseFile": "./LICENSE",
+  "publisher": "SureshNettur",
+  "engines": {
+    "vscode": "^1.36.1"
+  },
+  "icon": "icon.png",
+  "author": "Suresh Nettur",
+  "contributors": [
+    "Shanthi Karpurapu",
+    "Unnati Nettur",
+    "Likhit Sagar Gajja",
+    "Akhil Dusi"
+  ],
+  "categories": [
+    "AI",
+    "Chat",
+    "Education",
+    "Machine Learning",
+    "Programming Languages",
+    "Snippets",
+    "Testing",
+    "Other"
+  ],
+  "keywords": [
+    "AI",
+    "Automation",
+    "BDD",
+    "Code Generation",
+    "Copilot",
+    "Cucumber",
+    "Playwright",
+    "POM",
+    "Test Automation",
+    "Test Cases",
+    "Testing",
+    "UI Automation",
+    "Web Automation"
+  ],
+  "activationEvents": [],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "pwc.processTest",
+        "title": "Generate Playwright Code Using AI"
+      },
+      {
+        "command": "pwc.setApiKey",
+        "title": "Set API Key"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "serve": "live-server src/index.html --verbose",
+    "start": "npm run serve",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src --ext ts",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/mocha": "^10.0.7",
+    "@types/node": "20.x",
+    "@types/vscode": "^1.36.1",
+    "@typescript-eslint/eslint-plugin": "^7.14.1",
+    "@typescript-eslint/parser": "^7.11.0",
+    "@vscode/test-cli": "^0.0.9",
+    "@vscode/test-electron": "^2.4.0",
+    "eslint": "^8.57.0",
+    "live-server": "^1.2.2",
+    "typescript": "^5.4.5"
+  },
+  "dependencies": {
+    "config": "^3.3.12",
+    "openai": "^4.55.7"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nsuresh9806/tbd.git"
+  }
+}

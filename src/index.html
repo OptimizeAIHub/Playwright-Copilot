@@ -1,0 +1,71 @@
+<html>
+    <head>
+        <style>
+        table {
+          font-family: arial, sans-serif;
+          border-collapse: collapse;
+        }
+        
+        td, th {
+          border: 0px solid #dddddd;
+          text-align: center;
+          padding: 10px;
+        }
+
+        </style>
+        </head>
+<body>
+
+<script type="text/javascript">
+
+    function clearAll() {
+        document.getElementById("txt").value = "";
+        document.getElementById("txt1").value = "";
+        document.getElementById("txt2").value = "";
+    }
+
+    function displayOut() {
+        var input = document.getElementById("txt").value;
+        var text1 = document.getElementById("txt1");
+        var text2 = document.getElementById("txt2");
+        text1.value = input;
+        text2.value = input;
+
+        if (input.length === 0) {
+            alert("Please enter a valid test.");
+            return;
+        }
+    }
+
+</script>
+
+<form>
+
+  <table style="width: 60%;">
+    <tr>
+        <th colspan="4"><h1>Playwright Copilot</h1>
+        
+            <h4 style="color: #007BFF; font-style: italic; border-left: 3px solid #007BFF; padding-left: 10px;">
+                Automate Cucumber/BDD Tests with AI Assistance
+              </h4>
+    </tr>
+    <tr>
+        <th>Enter BDD Scenarios</th>
+        <th></th>
+        <th>Page Object Class Code</th>
+        <th>Step Definition Code</th>
+    </tr>
+    <tr>
+        <td><textarea id="txt" rows="20" cols="40">Add BDD scenarios here and click Generate Code.</textarea></td>
+        <td>
+            <input type="button" onclick="displayOut()" value=" Generate Code ">
+        </td>
+        <td><textarea id="txt1" rows="20" cols="40" readonly="readonly"></textarea></td>
+        <td><textarea id="txt2" rows="20" cols="40" readonly="readonly"></textarea></td>
+    </tr>
+  </table>
+  
+</form>
+
+</body>
+</html>
