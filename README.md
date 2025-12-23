@@ -7,7 +7,7 @@ It allows users to input or copy-paste BDD scenarios, select an OpenAI model, an
 Playwright Copilot utilizes the novel **"Few-shot chain"** prompt technique introduced by us in our research paper – [IEEE Paper](https://ieeexplore.ieee.org/abstract/document/10812696).  
 By leveraging this prompt technique, Playwright Copilot shows enhanced code generation accuracy and maintainability compared to GPT-3.5, GPT-4, and GitHub Copilot.
 
-**Authors**: Suresh Nettur, Shanthi Karpurapu, Unnati Nettur, Likhit Sagar Gajja.
+**Author(s)**: Suresh Babu Nettur.
 
 ---
 
