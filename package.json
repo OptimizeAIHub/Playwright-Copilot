@@ -10,13 +10,7 @@
     "vscode": "^1.36.1"
   },
   "icon": "icon.png",
-  "author": "Suresh Nettur",
-  "contributors": [
-    "Shanthi Karpurapu",
-    "Unnati Nettur",
-    "Likhit Sagar Gajja",
-    "Akhil Dusi"
-  ],
+  "author": "Suresh Babu Nettur",
   "categories": [
     "AI",
     "Chat",
