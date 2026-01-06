@@ -50,10 +50,10 @@ async function openAIcallStep(userApiKey, inputText, modelName) {
                         + "Step 3: Do not include explanation. "
                         + "Your task is to write the code with step definitions for every scenario and the JavaScript file is {step} = login-step.js"
                 },
-            ],
-            max_tokens: config_json_1.default['gpt_max_tokens'],
-            temperature: config_json_1.default['gpt_temperature'],
-            top_p: config_json_1.default['gpt_top_p']
+            ]
+            //max_tokens: configData['gpt_max_tokens'],
+            //temperature: configData['gpt_temperature'],
+            //top_p: configData['gpt_top_p']
         });
         // Check if the response has valid content
         const result = (getStepCodeAPIcall.choices
@@ -91,10 +91,10 @@ async function openAIcallPom(userApiKey, inputText, modelName) {
                     "Step 9: Review all generated code for accuracy, proper structure, and Playwright conventions. If any step is missed or incomplete, rewrite the code accordingly." +
                     "for the given {step} file =" + inputText + "the page object class implementation is {page} = "
             },
-        ],
-        max_tokens: config_json_1.default['gpt_max_tokens'],
-        temperature: config_json_1.default['gpt_temperature'],
-        top_p: config_json_1.default['gpt_top_p']
+        ]
+        //max_tokens: configData['gpt_max_tokens'],
+        //temperature: configData['gpt_temperature'],
+        //top_p: configData['gpt_top_p']
     });
     const result = (getPomCodeAPIcall.choices
         && getPomCodeAPIcall.choices.length > 0
@@ -224,6 +224,10 @@ function getWebviewContent() {
   <html>
     <head>
         <style>
+			body {
+  				background-color: var(--vscode-editor-background, #0f172a);
+  				color: var(--vscode-editor-foreground, #e5e7eb);
+			}
 			table {
 				font-family: arial, sans-serif;
 				border: 0px solid #dddddd;
@@ -250,9 +254,9 @@ function getWebviewContent() {
 				padding: 12px 24px;
 				font-size: 14px;
 				font-family: 'Segoe UI', Tahoma, Geneva, sans-serif;
-				color: white;
+				color: #ffffff;
 				height: 40px;
-				background-color: #2e8b57;
+				background-color: #c59d5f;
 				border: none;
 				border-radius: 5px;
 				outline: none;
@@ -272,7 +276,7 @@ function getWebviewContent() {
             	font-family: 'Segoe UI', serif;
             	font-size: 30px;
             	text-align: center;
-				background: #2e8b57;
+				background: linear-gradient(135deg, #c59d5f, #d1ad70);
 				color: transparent;
 				-webkit-background-clip: text;
 				background-clip: text;
@@ -282,7 +286,7 @@ function getWebviewContent() {
 			h4.fancy {
 				font-family: 'Segoe UI', monospace;
 				font-size: 16px;
-				color: #2e8b57;
+				color: #c59d5f;
 				letter-spacing: 1px;
 				transition: all 0.3s ease-in-out;
 				margin-top: 0px; 
@@ -291,7 +295,7 @@ function getWebviewContent() {
 				font-family: 'Segoe UI', sans-serif;
 				font-size: 16px;
 				font-weight: bold;
-				color: #2e8b57;
+				color: #c59d5f;
 				letter-spacing: 1px;
 				text-align: left;
 				align: left;
@@ -389,11 +393,9 @@ function getWebviewContent() {
 			+ "\\tAs a user, I want to be able to log into the application to access my account.\\n"
 			+ "  Background: \\n\\tGiven the web browser is at the saucelabs login page.\\n\\n"
 			+ "  Scenario: Successful Login with valid credentials\\n"
-			+ "\\tGiven I navigate to the SauceDemo login page\\n"
 			+ "\\tWhen I login with the username \\"standard_user\\", the password \\"secret_sauce\\", and click login button\\n"
 			+ "\\tThen I should be redirected to the inventory page.\\n\\n"
 			+ "  Scenario: Unsuccessful login with invalid credentials \\n"
-			+ "\\tGiven I navigate to the SauceDemo login page\\n"
 			+ "\\tWhen I login with the username \\"invalid_user\\", the password \\"wrong_password\\", "
 			+ "and click login button\\n"
 			+ "\\tThen I should see an error message \\"Epic sadface: Username and password do not match any user.\\".";
@@ -440,22 +442,21 @@ function getWebviewContent() {
 			<tr>
 				<td>
 					<label class="fancy-label">OpenAI Model &nbsp;</label>
-				</td>
-				<td>
 					<select name="LLM" id="gpt" class="fancy-select">
 						<option value="gpt-4o">gpt-4o</option>
 						<option value="gpt-4o-mini">gpt-4o-mini</option>
-						<option value="gpt-4-turbo">gpt-4-turbo</option>
-						<option value="gpt-3.5-turbo">gpt-3.5-turbo</option>
+						<option value="gpt-5-mini">gpt-5-mini</option>
+						<option value="gpt-5-nano">gpt-5-nano</option>
+						<option value="gpt-5">gpt-5</option>
 						<option value="o1">o1</option>
 						<option value="o1-preview">o1-preview</option>
 						<option value="o1-mini">o1-mini</option>
+						<option value="gpt-3.5-turbo">gpt-3.5-turbo</option>
+						<option value="gpt-4-turbo">gpt-4-turbo</option>
 					</select>
 				</td>
-				<td>&nbsp;
+				<td>
 					<label id="apiKeyLabel" class="fancy-label hidden" >OpenAI API Key &nbsp;</label>
-				</td>
-				<td>&nbsp;
 				    <input id="apiKeyTF" class="rounded-input hidden" type="password">
 				</td>
 			</tr>

@@ -9,6 +9,9 @@ Minor change in sample scenario.
 ### 1.2.0
 Added GPT 5 models.
 
+### 1.2.1
+Updated Theme.
+
 ### Future Release(s)
 Planned improvements might include:
     Added multiple OpenAI models for customized code generation.
