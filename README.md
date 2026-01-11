@@ -141,14 +141,13 @@ Select a model → Click **Generate Code** → Get complete step definitions and
 This project is licensed under:
 
 - **Apache License 2.0**
-- **Creative Commons Attribution-NonCommercial 4.0 International (CC BY-NC 4.0)**
+
 
 You are free to:
 - **Share**: Copy and redistribute
 - **Adapt**: Remix and build upon it  
 As long as you:
 - **Attribute** properly
-- **Do not use for commercial purposes**
 
 ---
 

@@ -2,8 +2,8 @@
   "name": "pwc",
   "displayName": "Playwright Copilot",
   "description": "Playwright Copilot is a Visual Studio Code extension that automates web testing by generating code for Playwright and Cucumber/BDD frameworks. With AI-powered code generation, users can input BDD scenarios, choose an OpenAI model, and instantly create step definitions and Page Object Model (POM) code.",
-  "version": "1.0.0",
-  "license": "CC-BY-NC-4.0",
+  "version": "1.2.1",
+  "license": "Apache-2.0",
   "licenseFile": "./LICENSE",
   "publisher": "SureshNettur",
   "engines": {
